@@ -97,5 +97,5 @@ awk 'pattern {action}' filename
 |END|awk가 모든 입력을 처리한 후, 옆에 제시되는 문장을 실행시키도록 한다|
 |expression|식을 평가한 후 이 식이 참, 즉 non-zero이거나 non-null인 경우 문장을 실행한다|
 |/re/|정규식과 일치하는 문자열을 포함하고 있는 라인에서 문장을 실행한다|
-|compound-pattern|복합패턴이라는 것으로 &&(and)||(or),!(not)그리고 괄호에 의해 연결시킨 것이다. expression의 경우와 마찬가지로 복합 패턴도 참인 경우의 문장을 실행시킨다|
+|compound-pattern|복합패턴이라는 것으로 "&&(and)||(or),!(not)"그리고 괄호에 의해 연결시킨 것이다. expression의 경우와 마찬가지로 복합 패턴도 참인 경우의 문장을 실행시킨다|
 |pattern1,pattern2|이러한 패턴을 범위 패턴이라고 한다. 현재 처리되고 있는 라인이 pattern1과 일치되고, 다음에 따라오는 라인중 임의의 라인이 pattern2와 일치할 때, 범위 패턴은 두 라인사이의 각 라인과 일치한다|
