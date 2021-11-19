@@ -80,3 +80,5 @@ NAME을 LASTNAME으로 변경 ```sed 's/NAME/LASTNAME/g' sed_data.txt```
 ---
 ## awk
 awk는 **Aho(Alfred Aho)+Weinberger(Peter Weinbeger)+Kernighan(Brian Kernighan)**으로 awk기능을 디자인한 사람들의 이니셜을 조합하여 만든 이름으로, 유닉스에서 처음 개발된 일반 스크립트 언어이다. awk의 기본 기능은 텍스트 형태로 되어있는 입력 데이터를 행과 단어 별로 처리해 출력하는 것이다.
+
+간단한 연산자를 명령라인에서 사용할 수 있으며, 큰 프로그램을 위해 사용 될 수 있습니다.
