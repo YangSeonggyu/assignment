@@ -46,9 +46,9 @@ sed명령어는 동작시 내부적으로 두개의 워크 스페이스를 사�
 |p|조건에 부합하는 라인을 출력하는 명령어|
 |s/orgin/change/|앞에 것을 뒤에 것으로 변경하는 명령어|
 ### 예제
-
-이 파일을 가지고 실습 해보겠습니다.
+**이 파일을 가지고 실습 해보겠습니다.**
 ![0](https://user-images.githubusercontent.com/94627358/142593879-1ba81ecc-06d0-46e2-9d56-c103a425f2f1.PNG)
+
 ---
 **파일에서 첫 번째 항만 출력**
 ![1](https://user-images.githubusercontent.com/94627358/142594057-585a90e4-2621-454a-9eae-8ec29c2a2872.PNG)
