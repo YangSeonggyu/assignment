@@ -51,6 +51,32 @@ sed명령어는 동작시 내부적으로 두개의 워크 스페이스를 사�
 
 ---
 ![1](https://user-images.githubusercontent.com/94627358/142594057-585a90e4-2621-454a-9eae-8ec29c2a2872.PNG)
-파일에서 첫 번째 항만 출력했습니다.```sed '1p' sed_data.txt```
+파일에서 첫 번째 항만 출력```sed '1p' sed_data.txt```
+
+---
+![2](https://user-images.githubusercontent.com/94627358/142594415-216fa9a1-6fe3-42f7-8de9-8a3ce5542526.PNG)
+파일에서 첫 번째 항만 출력```sed -n '1p' sed_data.txt```
+
+---
+![3](https://user-images.githubusercontent.com/94627358/142594531-860f360b-bac7-4b9f-9302-12d462bb2ceb.PNG)
+파일에서 2~4라인 범위만 출력 ```sed -n '2,4p' ./sed_data.txt```
+
+---
+![4](https://user-images.githubusercontent.com/94627358/142594537-97bea3ce-e359-4e56-9950-0975b27646f0.PNG)
+전체 출력 ```sed -n '1,' ./sed_data.txt```
+
+---
+![5](https://user-images.githubusercontent.com/94627358/142594550-cc881bbf-2e25-4c37-9e4f-35eed91bf52e.PNG)
+2로 시작하는 단어만 출력 ```sed -n '/^2/p' sed_data.txt```
+
+---
+![6](https://user-images.githubusercontent.com/94627358/142594553-4d35ef0e-4f0e-4bbc-864f-56aa1dd51968.PNG)
+LEE가 들어가 있는 행들만 출력 ```sed -n '/LEE/p' sed_data.txt```
+
+---
+![7](https://user-images.githubusercontent.com/94627358/142594555-ae7b22dd-bc01-4896-a548-187fa11723fd.PNG)
+NAME을 LASTNAME으로 변경 ```sed 's/NAME/LASTNAME/g' sed_data.txt```
+
+---
 ## awk
 
