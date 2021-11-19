@@ -99,3 +99,38 @@ awk 'pattern {action}' filename
 |/re/|정규식과 일치하는 문자열을 포함하고 있는 라인에서 문장을 실행한다|
 |compound-pattern|복합패턴이라는 것으로 "and,or,not"그리고 괄호에 의해 연결시킨 것이다. expression의 경우와 마찬가지로 복합 패턴도 참인 경우의 문장을 실행시킨다|
 |pattern1,pattern2|이러한 패턴을 범위 패턴이라고 한다. 현재 처리되고 있는 라인이 pattern1과 일치되고, 다음에 따라오는 라인중 임의의 라인이 pattern2와 일치할 때, 범위 패턴은 두 라인사이의 각 라인과 일치한다|
+#### 예제
+![0](https://user-images.githubusercontent.com/94627358/142600623-5d2b4135-67af-4bc6-80ff-5fd73435897c.PNG)
+이 파일을 가지고 실습 해보겠습니다.
+
+---
+![1](https://user-images.githubusercontent.com/94627358/142600659-d48b1e9f-dfe8-4945-aa9f-beeec5d681c0.PNG)
+전체 출력 ```awk '{ print $0 }' awk_data.txt```
+
+---
+![2](https://user-images.githubusercontent.com/94627358/142600663-a5036736-9d8c-4d34-a0c3-95d3c49b372b.PNG)
+첫 번째 필드만 출력 ```awk '{ print $1 }' awk_data.txt```
+
+---
+![3](https://user-images.githubusercontent.com/94627358/142600664-f4f01239-3319-409f-8e47-0836f32a9a5f.PNG)
+2~3번째 필드만 출력 ```awk '{ print $2,$3 }' awk_data.txt```
+
+---
+![4](https://user-images.githubusercontent.com/94627358/142600666-f78b5515-fa0e-44a9-9cbf-383ea1895584.PNG)
+SCORE 점수 합계 출력 ```awk '{sum += $6} END { print "SUM : "sum }' awk_data.txt```
+
+---
+![5](https://user-images.githubusercontent.com/94627358/142600669-df8e54a7-128d-4c7c-8449-4d02ed60e3fe.PNG)
+SCORE 90점 이상만 출력하기 ```awk '{ if( $6 >= 90 ) print ($0) }' awk_data.txt```
+
+---
+![6](https://user-images.githubusercontent.com/94627358/142600671-07d782c0-35e3-4fcc-a025-fa5a3c29fa78.PNG)
+남자면서 SCORE 90점 이상만 출력하기 ```awk '{ if($5 =="M" && $6>= 90) print ($0) }' awk_data.txt```
+
+---
+![7](https://user-images.githubusercontent.com/94627358/142600673-1e57ab65-9532-4e9d-84bd-4971316ce4c8.PNG)
+2번 반복해서 출력하기 ```awk '{ for(i=0;i<2;i++) print( i "번째 : " $0) }' awk_data.txt```
+
+
+---
+
