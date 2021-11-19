@@ -50,16 +50,19 @@ sed명령어는 동작시 내부적으로 두개의 워크 스페이스를 사�
 이 파일을 가지고 실습 해보겠습니다.
 
 ---
+**파일에서 첫 번째 항만 출력**
 ![1](https://user-images.githubusercontent.com/94627358/142594057-585a90e4-2621-454a-9eae-8ec29c2a2872.PNG)
-파일에서 첫 번째 항만 출력```sed '1p' sed_data.txt```
+```sed '1p' sed_data.txt```
 
 ---
+파일에서 첫 번째 항만 출력
 ![2](https://user-images.githubusercontent.com/94627358/142594415-216fa9a1-6fe3-42f7-8de9-8a3ce5542526.PNG)
-파일에서 첫 번째 항만 출력```sed -n '1p' sed_data.txt```
+```sed -n '1p' sed_data.txt```
 
 ---
+파일에서 2~4라인 범위만 출력
 ![3](https://user-images.githubusercontent.com/94627358/142594531-860f360b-bac7-4b9f-9302-12d462bb2ceb.PNG)
-파일에서 2~4라인 범위만 출력 ```sed -n '2,4p' ./sed_data.txt```
+ ```sed -n '2,4p' ./sed_data.txt```
 
 ---
 ![4](https://user-images.githubusercontent.com/94627358/142594537-97bea3ce-e359-4e56-9950-0975b27646f0.PNG)
