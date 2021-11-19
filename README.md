@@ -1,7 +1,15 @@
-# assignment
-<오픈소스sw개론> 20195122_양성규
-
-getopt_getopts_sed_awk 조사하기
-
+# 오픈소스SW개론 과제
+20195122_양성규
+## 목차
+1. [getopt](#getopt)
+2. [getopts](#getopts)
+3. [sed](#sed)
+4. [awk](#awk)
 ## getopt
+
+## getopts
+
+## sed
+
+## awk
 
