@@ -22,7 +22,8 @@ sed명령어를 이용해 편집 결과를 저장하기 전까지는 파일에 �
 ※ 단, sed옵션에서 -i 옵션을 지정한다면 원본을 바꾸게 됩니다. ※
 #### 패턴 스페이스(Pattern space)와 홀드 스페이스(Hold space)
 sed명령어는 동작시 내부적으로 두개의 워크 스페이스를 사용하는데, 이 두 버퍼를 패턴 스페이스(=패턴 버퍼), 홀드 스페이스(=홀드 버퍼)라고 합니다.
-<img src="https://user-images.githubusercontent.com/94627358/142590215-c26eb545-b49c-4678-8549-0b2cf8d90faa.PNG" width="200" height="200">
+
+<img src="https://user-images.githubusercontent.com/94627358/142590215-c26eb545-b49c-4678-8549-0b2cf8d90faa.PNG" width="200" height="500">
 
 ## awk
 
