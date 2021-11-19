@@ -14,7 +14,7 @@ POSIX 사양의 일부이며 Unix계열 시스템에 보편적입니다.
 ## getopts
 
 ## sed
-SED는 Stream Editor의 약자로 vi편집기처럼 편집에 특화된 명령어입니다.
+SED는 **Stream Editor**의 약자로 vi편집기처럼 편집에 특화된 명령어입니다.
 vi편집기는 편집기를 열어서 서로 소통하듯 수정/변경을 해나가는 대화형 방식이라면 sed는 명령행에서
 파일을 인자로 받아 명령어를 통해 작업한 후 결과를 화면으로 확인하는 방식입니다.
 sed명령어를 이용해 편집 결과를 저장하기 전까지는 파일에 아무런 변경도 가하지 않습니다.
@@ -79,4 +79,4 @@ NAME을 LASTNAME으로 변경 ```sed 's/NAME/LASTNAME/g' sed_data.txt```
 
 ---
 ## awk
-
+awk는 **Aho(Alfred Aho)+Weinberger(Peter Weinbeger)+Kernighan(Brian Kernighan)**으로 awk기능을 디자인한 사람들의 이니셜을 조합하여 만든 이름으로, 유닉스에서 처음 개발된 일반 스크립트 언어이다. awk의 기본 기능은 텍스트 형태로 되어있는 입력 데이터를 행과 단어 별로 처리해 출력하는 것이다.
