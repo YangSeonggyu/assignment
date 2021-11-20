@@ -67,6 +67,32 @@ done
 ![ge](https://user-images.githubusercontent.com/94627358/142716143-357db838-d1e1-4152-aeb3-50173cb40e37.PNG)
 
 ## getopts
+getopts명령은 매개변수 리스트에서 옵션 및 옵션 인수를 검색하는 Korn/POSIX 쉘 내장 명령입니다. 
+### 역사
+getopt에는 몇 가지 문제가 있었습니다. 인수의 공백이나 쉘 메타 문자를 처리할 수 없었고 오류 메시지 출력을 비활성화하는 기능이 없었습니다.
+getops는 1986년 Unix SVR3와 함께 제공되는 Bourne 쉘에 처음 도입되었습니다.
+### 사용법
+getopt 및 getopts의 사용 개요는 C와 유사합니다.
+
+```
+getopt optstring [매개변수]
+getops optstring varname [매개변수]
+```
+- optstring 이 부분은 C와 같은 형식을 가진다.
+- 파라미터 부분은 구문 분석하기 위해 getopt를 원하는 모든 것을 받아들입니다. 공통 값은 POSIX쉘의 모든 매개변수 "$@"입니다.
+- getopts의 varname 부분은 구문 분석된 옵션을 저장할 쉘 변수의 이름을 지정합니다.
+- getopt는 단순히 정규화된 인수를 나타내는 공백으로 구분된 토큰을 포함하는 플랫 문자열을 반환합니다. 그런 다음 while-loop를 사용하여 기본적으로 구문 분석합니다.
+- getopts는 C getopt처럼 반복저으로 호출된다. 인수의 끝에 도달하면 1(거짓)을 반환합니다.
+### 비교
+|특징＼프로그램|POSIX getopts|Solaris getopts|Unix/BSD getopt|Linux getopt|
+|:---:|:---:|:---:|:---:|:---:|
+|쉬운 구분 분석을 위한 분할 옵션|YES|YES|YES|YES|
+|오류 메시지 억제 허용|YES|YES|NO|YES|
+|공백 및 메타 문자로 안전|YES|YES|NO|YES|
+|피연산자를 옵션과 혼합가능|NO|YES|NO|YES|
+|긴 옵션 지원|Emulation|YES|NO|YES|
+|선택적 인수|ERROR|ERROR|NO|YES|
+
 
 ## sed
 SED는 **Stream Editor**의 약자로 vi편집기처럼 편집에 특화된 명령어입니다.
