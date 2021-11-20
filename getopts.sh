@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 help() {
 	echo "$0 [option]"
