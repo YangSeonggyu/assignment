@@ -92,8 +92,50 @@ getops optstring varname [매개변수]
 |피연산자를 옵션과 혼합가능|NO|YES|NO|YES|
 |긴 옵션 지원|Emulation|YES|NO|YES|
 |선택적 인수|ERROR|ERROR|NO|YES|
+### 예제
+**소스코드**
 
+```
+#!/bin/bash
 
+help() {
+        echo "$0 [option]"
+                echo "  -h                      도움말 출력"
+                echo "  -a [arguments]          인자 값 출력"
+                echo "  -l [경로]               경로 목록"
+}
+while getopts "a:l:h" opt
+do
+        case $opt in
+                a)      arg_a=$OPTARG
+                        echo "Arg A: $arg_a"
+                        ;;
+                l)      arg_b=$OPTARG
+                        ls -al $arg_b
+                        ;;
+                h) help ;;
+                ?) help ;;
+        esac
+done
+```
+
+**실행 결과**
+argument값을 입력 안함.
+![0](https://user-images.githubusercontent.com/94627358/142718407-6f83928d-87e1-4f05-b0e3-2494d23b1883.PNG)
+
+---
+도움말 출력
+![1](https://user-images.githubusercontent.com/94627358/142718402-ed445755-edb9-469c-98b2-806e484be3fd.PNG)
+
+---
+argument값 출력
+![2](https://user-images.githubusercontent.com/94627358/142718405-a397bcea-8be5-45e3-a9ea-68ea0600c01d.PNG)
+
+---
+경로 입력 후 해당 경로 목록 출력
+![3](https://user-images.githubusercontent.com/94627358/142718406-c6be8311-02d6-4e64-b5a2-4c586e194092.PNG)
+
+---
 ## sed
 SED는 **Stream Editor**의 약자로 vi편집기처럼 편집에 특화된 명령어입니다.
 vi편집기는 편집기를 열어서 서로 소통하듯 수정/변경을 해나가는 대화형 방식이라면 sed는 명령행에서
