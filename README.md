@@ -64,6 +64,7 @@ done
 ```
 
 **실행결과**
+
 ![ge](https://user-images.githubusercontent.com/94627358/142716143-357db838-d1e1-4152-aeb3-50173cb40e37.PNG)
 
 ## getopts
@@ -120,6 +121,7 @@ done
 ```
 
 **argument값을 입력 안함.**
+
 ![0](https://user-images.githubusercontent.com/94627358/142718407-6f83928d-87e1-4f05-b0e3-2494d23b1883.PNG)
 
 ---
@@ -129,10 +131,12 @@ done
 
 ---
 **argument값 출력**
+
 ![2](https://user-images.githubusercontent.com/94627358/142718405-a397bcea-8be5-45e3-a9ea-68ea0600c01d.PNG)
 
 ---
 **경로 입력 후 해당 경로 목록 출력**
+
 ![3](https://user-images.githubusercontent.com/94627358/142718406-c6be8311-02d6-4e64-b5a2-4c586e194092.PNG)
 
 ---
@@ -170,40 +174,48 @@ sed명령어는 동작시 내부적으로 두개의 워크 스페이스를 사�
 |s/orgin/change/|앞에 것을 뒤에 것으로 변경하는 명령어|
 ### 예제
 **이 파일을 가지고 실습 해보겠습니다.**
+
 ![0](https://user-images.githubusercontent.com/94627358/142593879-1ba81ecc-06d0-46e2-9d56-c103a425f2f1.PNG)
 
 ---
 **파일에서 첫 번째 항만 출력**
+
 ![1](https://user-images.githubusercontent.com/94627358/142594057-585a90e4-2621-454a-9eae-8ec29c2a2872.PNG)
 ```sed '1p' sed_data.txt```
 
 ---
 **파일에서 첫 번째 항만 출력**
+
 ![2](https://user-images.githubusercontent.com/94627358/142594415-216fa9a1-6fe3-42f7-8de9-8a3ce5542526.PNG)
 ```sed -n '1p' sed_data.txt```
 
 ---
 **파일에서 2~4라인 범위만 출력**
+
 ![3](https://user-images.githubusercontent.com/94627358/142594531-860f360b-bac7-4b9f-9302-12d462bb2ceb.PNG)
  ```sed -n '2,4p' ./sed_data.txt```
 
 ---
 **전체 출력**
+
 ![4](https://user-images.githubusercontent.com/94627358/142594537-97bea3ce-e359-4e56-9950-0975b27646f0.PNG)
 ```sed -n '1,' ./sed_data.txt```
 
 ---
 **2로 시작하는 단어만 출력**
+
 ![5](https://user-images.githubusercontent.com/94627358/142594550-cc881bbf-2e25-4c37-9e4f-35eed91bf52e.PNG)
 ```sed -n '/^2/p' sed_data.txt```
 
 ---
 **LEE가 들어가 있는 행들만 출력**
+
 ![6](https://user-images.githubusercontent.com/94627358/142594553-4d35ef0e-4f0e-4bbc-864f-56aa1dd51968.PNG)
 ```sed -n '/LEE/p' sed_data.txt```
 
 ---
 **NAME을 LASTNAME으로 변경**
+
 ![7](https://user-images.githubusercontent.com/94627358/142594555-ae7b22dd-bc01-4896-a548-187fa11723fd.PNG)
 ```sed 's/NAME/LASTNAME/g' sed_data.txt```
 
@@ -231,41 +243,49 @@ awk 'pattern {action}' filename
 |pattern1,pattern2|이러한 패턴을 범위 패턴이라고 한다. 현재 처리되고 있는 라인이 pattern1과 일치되고, 다음에 따라오는 라인중 임의의 라인이 pattern2와 일치할 때, 범위 패턴은 두 라인사이의 각 라인과 일치한다|
 ### 예제
 **이 파일을 가지고 실습 해보겠습니다.**
+
 ![0](https://user-images.githubusercontent.com/94627358/142600623-5d2b4135-67af-4bc6-80ff-5fd73435897c.PNG)
 
 
 ---
 **전체 출력**
+
 ![1](https://user-images.githubusercontent.com/94627358/142600659-d48b1e9f-dfe8-4945-aa9f-beeec5d681c0.PNG)
 ```awk '{ print $0 }' awk_data.txt```
 
 ---
 **첫 번째 필드만 출력**
+
 ![2](https://user-images.githubusercontent.com/94627358/142600663-a5036736-9d8c-4d34-a0c3-95d3c49b372b.PNG)
 ```awk '{ print $1 }' awk_data.txt```
 
 ---
 **2~3번째 필드만 출력**
+
 ![3](https://user-images.githubusercontent.com/94627358/142600664-f4f01239-3319-409f-8e47-0836f32a9a5f.PNG)
 ```awk '{ print $2,$3 }' awk_data.txt```
 
 ---
 **SCORE 점수 합계 출력**
+
 ![4](https://user-images.githubusercontent.com/94627358/142600666-f78b5515-fa0e-44a9-9cbf-383ea1895584.PNG)
 ```awk '{sum += $6} END { print "SUM : "sum }' awk_data.txt```
 
 ---
 **SCORE 90점 이상만 출력하기**
+
 ![5](https://user-images.githubusercontent.com/94627358/142600669-df8e54a7-128d-4c7c-8449-4d02ed60e3fe.PNG)
 ```awk '{ if( $6 >= 90 ) print ($0) }' awk_data.txt```
 
 ---
 **남자면서 SCORE 90점 이상만 출력하기**
+
 ![6](https://user-images.githubusercontent.com/94627358/142600671-07d782c0-35e3-4fcc-a025-fa5a3c29fa78.PNG)
 ```awk '{ if($5 =="M" && $6>= 90) print ($0) }' awk_data.txt```
 
 ---
 **2번 반복해서 출력하기**
+
 ![7](https://user-images.githubusercontent.com/94627358/142600673-1e57ab65-9532-4e9d-84bd-4971316ce4c8.PNG)
 ```awk '{ for(i=0;i<2;i++) print( i "번째 : " $0) }' awk_data.txt```
 
