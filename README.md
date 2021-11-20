@@ -15,6 +15,21 @@ getopt는 손쉬운 구문 분석을 위해 명령행의 옵션들을 분해하�
   - 첫 번째 파트에서 '-o' 또는 '--options'옵션이 발견되지 않으면 두 번째 파트의 첫 번째 파라미터가 짧은 옵션 문자열로 사용됨.
 
 getopt(1)의 전통적인 구현은 인수와 비옵션 매개 변수에서 공백과 기타 특수문자를 처리할 수 없습니다.
+### 프로그램 라이브러리 및 서식
+**라이브러리**
+```Standara C Library(libc,-lc)```
+**서식**
+```
+#include <unistd.h>
+extern char *optarg;
+extern int optind;
+extern int optopt;
+extern int opterr;
+extern int optreset;
+
+int
+getopt(int argc, char * const *argv, const char *optstring);
+```
 ## getopts
 
 ## sed
