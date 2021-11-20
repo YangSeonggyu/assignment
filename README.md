@@ -66,7 +66,7 @@ done
 **실행결과**
 
 ![ge](https://user-images.githubusercontent.com/94627358/142716143-357db838-d1e1-4152-aeb3-50173cb40e37.PNG)
-
+---
 # getopts
 getopts명령은 매개변수 리스트에서 옵션 및 옵션 인수를 검색하는 Korn/POSIX 쉘 내장 명령입니다. 
 ### 역사
