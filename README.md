@@ -119,20 +119,19 @@ do
 done
 ```
 
-**실행 결과**
-argument값을 입력 안함.
+**argument값을 입력 안함.**
 ![0](https://user-images.githubusercontent.com/94627358/142718407-6f83928d-87e1-4f05-b0e3-2494d23b1883.PNG)
 
 ---
-도움말 출력
+**도움말 출력**
 ![1](https://user-images.githubusercontent.com/94627358/142718402-ed445755-edb9-469c-98b2-806e484be3fd.PNG)
 
 ---
-argument값 출력
+**argument값 출력**
 ![2](https://user-images.githubusercontent.com/94627358/142718405-a397bcea-8be5-45e3-a9ea-68ea0600c01d.PNG)
 
 ---
-경로 입력 후 해당 경로 목록 출력
+**경로 입력 후 해당 경로 목록 출력*
 ![3](https://user-images.githubusercontent.com/94627358/142718406-c6be8311-02d6-4e64-b5a2-4c586e194092.PNG)
 
 ---
