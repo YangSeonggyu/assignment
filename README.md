@@ -1,11 +1,11 @@
-# 오픈소스SW개론 과제
+# **오픈소스SW개론 과제**
 20195122_양성규
-# 목차
+# **목차**
 1. [getopt](#getopt)
 2. [getopts](#getopts)
 3. [sed](#sed)
 4. [awk](#awk)
-# getopt
+# **getopt**
 getopt는 손쉬운 구문 분석을 위해 명령행의 옵션들을 분해하고 합법적인 옵션들을 확인하는데 사용된다.(GNU getopt(3)루틴사용)
 
 매개변수 getopt는 두 부분으로 나눌 수 있다.
