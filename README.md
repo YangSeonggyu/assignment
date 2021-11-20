@@ -131,7 +131,7 @@ done
 ![2](https://user-images.githubusercontent.com/94627358/142718405-a397bcea-8be5-45e3-a9ea-68ea0600c01d.PNG)
 
 ---
-**경로 입력 후 해당 경로 목록 출력*
+**경로 입력 후 해당 경로 목록 출력**
 ![3](https://user-images.githubusercontent.com/94627358/142718406-c6be8311-02d6-4e64-b5a2-4c586e194092.PNG)
 
 ---
