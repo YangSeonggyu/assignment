@@ -1,11 +1,11 @@
 # 오픈소스SW개론 과제
 20195122_양성규
-## 목차
+# 목차
 1. [getopt](#getopt)
 2. [getopts](#getopts)
 3. [sed](#sed)
 4. [awk](#awk)
-## getopt
+# getopt
 getopt는 손쉬운 구문 분석을 위해 명령행의 옵션들을 분해하고 합법적인 옵션들을 확인하는데 사용된다.(GNU getopt(3)루틴사용)
 
 매개변수 getopt는 두 부분으로 나눌 수 있다.
@@ -67,7 +67,7 @@ done
 
 ![ge](https://user-images.githubusercontent.com/94627358/142716143-357db838-d1e1-4152-aeb3-50173cb40e37.PNG)
 
-## getopts
+# getopts
 getopts명령은 매개변수 리스트에서 옵션 및 옵션 인수를 검색하는 Korn/POSIX 쉘 내장 명령입니다. 
 ### 역사
 getopt에는 몇 가지 문제가 있었습니다. 인수의 공백이나 쉘 메타 문자를 처리할 수 없었고 오류 메시지 출력을 비활성화하는 기능이 없었습니다.
@@ -140,7 +140,7 @@ done
 ![3](https://user-images.githubusercontent.com/94627358/142718406-c6be8311-02d6-4e64-b5a2-4c586e194092.PNG)
 
 ---
-## sed
+# sed
 SED는 **Stream Editor**의 약자로 vi편집기처럼 편집에 특화된 명령어입니다.
 vi편집기는 편집기를 열어서 서로 소통하듯 수정/변경을 해나가는 대화형 방식이라면 sed는 명령행에서
 파일을 인자로 받아 명령어를 통해 작업한 후 결과를 화면으로 확인하는 방식입니다.
@@ -220,7 +220,7 @@ sed명령어는 동작시 내부적으로 두개의 워크 스페이스를 사�
 ```sed 's/NAME/LASTNAME/g' sed_data.txt```
 
 ---
-## awk
+# awk
 awk는 **Aho(Alfred Aho)+Weinberger(Peter Weinbeger)+Kernighan(Brian Kernighan)** 으로 awk기능을 디자인한 사람들의 이니셜을 조합하여 만든 이름으로, 유닉스에서 처음 개발된 일반 스크립트 언어이다. awk의 기본 기능은 텍스트 형태로 되어있는 입력 데이터를 행과 단어 별로 처리해 출력하는 것이다.
 
 간단한 연산자를 명령라인에서 사용할 수 있으며, 큰 프로그램을 위해 사용 될 수 있습니다. awk는 데이터 조작할 수 있기 때문에 쉘 스크립트에서 사용되는 필수 툴이며, 작은 데이터베이스를 관리하기 위해서도 필수입니다.
