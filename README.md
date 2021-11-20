@@ -15,9 +15,15 @@ getopt는 손쉬운 구문 분석을 위해 명령행의 옵션들을 분해하�
   - 첫 번째 파트에서 '-o' 또는 '--options'옵션이 발견되지 않으면 두 번째 파트의 첫 번째 파라미터가 짧은 옵션 문자열로 사용됨.
 
 getopt(1)의 전통적인 구현은 인수와 비옵션 매개 변수에서 공백과 기타 특수문자를 처리할 수 없습니다.
+### 역사
+명령줄 프로그램의 오랜 문제는 옵션을 지정하는 방법이였습니다. 초기 프로그램은 단일 문자 옵션(-a),함께 지정된 여러 옵션(-abc와 동일 -a -b -c),다중 문자 옵션(-inum), 인사가 있는 옵션(-a arg,-inum 3, -a=arg)및 다은 접두어 문자(-a,+b,/c)를 포함하여 여러 가지 방법을 사용했습니다.
+
+getopt는 적어도 1980년 이전에 출시되었습니다. AT&T는 1985년 텍사스에서 열린 UNIFORUM 회의에서 공개해 도메인에서 사용할 수 있도록 의도적으로 처음 발표했으며 이것은 **unistd.h** 헤더 파일의 일부로 **POSIX.2** 표준에 지정되었습니다.
 ### 프로그램 라이브러리 및 서식
 **라이브러리**
+
 ```Standara C Library(libc,-lc)```
+
 **서식**
 ```
 #include <unistd.h>
@@ -30,6 +36,36 @@ extern int optreset;
 int
 getopt(int argc, char * const *argv, const char *optstring);
 ```
+### 사용법
+**getopt 기반 프로그램의 명령줄 구문은 POSIX 권장 유틸리티 인수 구문입니다.**
+- '-'문자가 앞에 오는 단일 문자 영숫자입니다.
+- 필수 또는 선택적인 인수 또는 없음을 취할 수 있습니다.
+- 인수를 취하는 경우 이는 동일한 토큰 또는 다음 토큰에 있을 수 있습니다.
+- 마지막이 아닌 옵션이 인수를 취하지 않는 한 여러 옵션을 함께 연결할 수 있습니다.
+- 모든 옵션은 옵션이 아닌 인수보다 우선합니다.
+### 예제
+**소스 코드**
+
+```
+#!/bin/bash
+set -- $(getopt abcs: "$@")
+
+while true;
+do
+        case "$1" in
+        -a)     echo "AAAAAAAAAA" ;;
+        -b) echo "BBBBBBBBBB" ;;
+        -c) echo "CCCCCCCCCC" ;;
+        -s) echo "$2" ;;
+        --) break;
+        esac
+        shift
+done
+```
+
+**실행결과**
+![ge](https://user-images.githubusercontent.com/94627358/142716143-357db838-d1e1-4152-aeb3-50173cb40e37.PNG)
+
 ## getopts
 
 ## sed
