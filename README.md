@@ -263,7 +263,7 @@ awk 'pattern {action}' filename
 ![6](https://user-images.githubusercontent.com/94627358/142600671-07d782c0-35e3-4fcc-a025-fa5a3c29fa78.PNG)
 ```awk '{ if($5 =="M" && $6>= 90) print ($0) }' awk_data.txt```
 
---
+---
 **2번 반복해서 출력하기**
 ![7](https://user-images.githubusercontent.com/94627358/142600673-1e57ab65-9532-4e9d-84bd-4971316ce4c8.PNG)
 ```awk '{ for(i=0;i<2;i++) print( i "번째 : " $0) }' awk_data.txt```
